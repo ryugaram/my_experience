@@ -11,12 +11,14 @@ import com.ryu.service.MemberService;
 import com.ryu.vo.MemberVO;
 
 @Controller
-@RequestMapping("/member")
+@RequestMapping("/member/*")
 public class MemberController {
 
 	@Autowired
 	private MemberService service;
 	
+	
+	@RequestMapping("/list")
 	public String getlist(Model model) {
 		
 		List<MemberVO> list=null;

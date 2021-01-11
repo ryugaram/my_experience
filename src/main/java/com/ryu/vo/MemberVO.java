@@ -1,7 +1,8 @@
 package com.ryu.vo;
 
 public class MemberVO {
-
+	
+	private int bno;
 	private String name;
 	private int age;
 	private String sex;
@@ -37,9 +38,16 @@ public class MemberVO {
 	public void setHome(String home) {
 		this.home = home;
 	}
+	public int getBno() {
+		return bno;
+	}
+	public void setBno(int bno) {
+		this.bno = bno;
+	}
 	@Override
 	public String toString() {
-		return "MemberVO [name=" + name + ", age=" + age + ", sex=" + sex + ", tel=" + tel + ", home=" + home + "]";
+		return "MemberVO [bno=" + bno + ", name=" + name + ", age=" + age + ", sex=" + sex + ", tel=" + tel + ", home="
+				+ home + "]";
 	}
 	
 	
