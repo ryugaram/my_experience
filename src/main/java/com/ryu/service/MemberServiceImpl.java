@@ -20,4 +20,16 @@ public class MemberServiceImpl implements MemberService {
 		return dao.list();
 	}
 
+	@Override
+	public void write(MemberVO vo) {
+		
+		dao.write(vo);
+	}
+
+	@Override
+	public MemberVO view(int bno) {
+		
+		return dao.view(bno);
+	}
+
 }

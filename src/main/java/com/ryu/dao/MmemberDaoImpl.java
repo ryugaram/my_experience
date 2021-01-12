@@ -23,4 +23,16 @@ public class MmemberDaoImpl implements MemberDao {
 		return sql.selectList(namespace+".list");
 	}
 
+	@Override
+	public void write(MemberVO vo) {
+		
+		sql.insert(namespace+".write",vo);
+	}
+
+	@Override
+	public MemberVO view(int bno) {
+		
+		return sql.selectOne(namespace+".view",bno);
+	}
+
 }

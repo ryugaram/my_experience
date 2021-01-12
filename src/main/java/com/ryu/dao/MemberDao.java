@@ -9,4 +9,8 @@ public interface MemberDao {
 
 	List<MemberVO> list();
 
+	void write(MemberVO vo);
+
+	MemberVO view(int bno);
+
 }

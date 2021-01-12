@@ -8,4 +8,8 @@ public interface MemberService {
 
 	List<MemberVO> list();
 
+	void write(MemberVO vo);
+
+	MemberVO view(int bno);
+
 }

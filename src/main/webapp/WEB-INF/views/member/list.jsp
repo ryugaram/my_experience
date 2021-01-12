@@ -16,8 +16,7 @@
    <th>이름</th>
    <th>나이</th>
    <th>성별</th>
-   <th>전화번호</th>
-   <th>집주소</th>
+ 
   </tr>
  </thead>
  
@@ -27,13 +26,11 @@
  <tr>
   <td>${list.bno}</td>
   <td>
-  	<a href="/member/view?bno=${list.name}"><%-- ${list.title} --%></a>
+  	<a href="/member/view?bno=${list.bno}"> ${list.name} </a>
   	</td>
-  <td>${list.name}</td>
   <td>${list.age}</td>
   <td>${list.sex}</td>
-  <td>${list.tel}</td>
-  <td>${list.home}</td>
+ 
  </tr>
 </c:forEach>
  </tbody>

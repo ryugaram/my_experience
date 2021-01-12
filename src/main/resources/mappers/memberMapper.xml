@@ -10,5 +10,19 @@
  from member_test
 </select>
 
+<select id="write" resultType="com.ryu.vo.MemberVO">
+ insert into member_test(name,age,sex,tel,home)
+ values(#{name},#{age},#{sex},#{tel},#{home})
+</select>
+
+
+<select id="view" parameterType="int" resultType="com.ryu.vo.MemberVO">
+ select 
+  name,age,sex,tel,home
+ from 
+  member_test
+ where
+  bno = #{bno}   
+</select>
 
 </mapper>
