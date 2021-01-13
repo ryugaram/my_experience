@@ -12,4 +12,8 @@ public interface MemberService {
 
 	MemberVO view(int bno);
 
+	void modify(MemberVO vo);
+
+	void delete(int bno);
+
 }

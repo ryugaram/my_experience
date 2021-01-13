@@ -18,11 +18,28 @@
 
 <select id="view" parameterType="int" resultType="com.ryu.vo.MemberVO">
  select 
-  name,age,sex,tel,home
+  bno,name,age,sex,tel,home
  from 
   member_test
  where
   bno = #{bno}   
+</select>
+
+<select id="modify" resultType="com.ryu.vo.MemberVO">
+update member_test
+set
+  name=#{name},
+  age=#{age},
+  sex=#{sex},
+  tel=#{tel},
+  home=#{home}
+where  bno=#{bno}
+</select>
+
+<select id="delete" parameterType="int">
+  delete
+  from member_test
+ where bno = #{bno}
 </select>
 
 </mapper>

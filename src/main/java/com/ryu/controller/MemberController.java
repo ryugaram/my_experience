@@ -55,6 +55,31 @@ public class MemberController {
 	}
 	
 	
+	@RequestMapping(value="/modify", method= RequestMethod.GET)
+	public void modify(@RequestParam("bno")int bno, Model model) {
+		
+		MemberVO vo=service.view(bno);
+		model.addAttribute("viewlist",vo);
+		
+	}
+	
+	@RequestMapping(value="/modify", method= RequestMethod.POST)
+	public String postmodify(MemberVO vo) {
+		
+		service.modify(vo);
+		
+		return "redirect:/member/view?bno="+vo.getBno();
+	}
+	
+	@RequestMapping("/delete")
+	public String delete(@RequestParam("bno")int bno) {
+		
+		service.delete(bno);
+		
+		return "redirect:/member/list";
+	}
+		
+	
 	
 	
 }

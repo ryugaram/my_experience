@@ -36,5 +36,6 @@
  </tbody>
 
 </table>
+<a href="/member/write">추가하기 </a>
 </body>
 </html>

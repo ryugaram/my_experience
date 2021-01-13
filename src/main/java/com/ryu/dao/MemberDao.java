@@ -13,4 +13,8 @@ public interface MemberDao {
 
 	MemberVO view(int bno);
 
+	void modify(MemberVO vo);
+
+	void delete(int bno);
+
 }

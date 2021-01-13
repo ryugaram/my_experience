@@ -35,4 +35,17 @@ public class MmemberDaoImpl implements MemberDao {
 		return sql.selectOne(namespace+".view",bno);
 	}
 
+	@Override
+	public void modify(MemberVO vo) {
+		
+		sql.update(namespace+".modify",vo);
+		
+	}
+
+	@Override
+	public void delete(int bno) {
+		
+		sql.delete(namespace+".delete",bno);
+	}
+
 }

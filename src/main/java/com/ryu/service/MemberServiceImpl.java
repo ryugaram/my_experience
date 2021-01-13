@@ -32,4 +32,15 @@ public class MemberServiceImpl implements MemberService {
 		return dao.view(bno);
 	}
 
+	@Override
+	public void modify(MemberVO vo) {
+		dao.modify(vo);
+	}
+
+	@Override
+	public void delete(int bno) {
+		
+		dao.delete(bno);
+	}
+
 }

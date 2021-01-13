@@ -4,10 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>멤버 조회</title>
+<title>수정페이지</title>
 </head>
 <body>
-<!-- <form method="post"> -->
+
+<h2> 수정 페이지</h2>
+
+ <form method="post"> 
 <div id="nav">
 
 </div>
@@ -27,12 +30,8 @@
 <label>주소</label>
 <textarea cols="50" rows="5" name="home">${viewlist.home}</textarea><br />
 
-<!-- <!-- <button type="submit">작성</button>
+ <button type="submit">작성</button>
 
-</form> --> 
-<div>
-<a href="/member/modify?bno=${viewlist.bno}">게시물 수정</a>,<a href="/member/delete?bno=${viewlist.bno}">게시물 삭제</a>
-<a href="/member/list">메인</a>
-</div>
-</body>
+</form> 
+
 </html>
