@@ -43,4 +43,12 @@ public class MemberServiceImpl implements MemberService {
 		dao.delete(bno);
 	}
 
+	@Override
+	public int count() {
+		
+		return dao.count();
+	}
+
+	
+
 }

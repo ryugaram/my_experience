@@ -17,4 +17,6 @@ public interface MemberDao {
 
 	void delete(int bno);
 
+	public int count();
+
 }

@@ -16,4 +16,6 @@ public interface MemberService {
 
 	void delete(int bno);
 
+	public int count();
+
 }

@@ -42,4 +42,9 @@ where  bno=#{bno}
  where bno = #{bno}
 </select>
 
+<select id="count" resultType="int">
+  select count(*)
+  from member_test
+</select>
+
 </mapper>

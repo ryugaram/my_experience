@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.ryu.vo.MemberVO;
 
 @Repository
-public class MmemberDaoImpl implements MemberDao {
+public class MemberDaoImpl implements MemberDao {
 
 	@Inject
 	private SqlSession sql;
@@ -46,6 +46,13 @@ public class MmemberDaoImpl implements MemberDao {
 	public void delete(int bno) {
 		
 		sql.delete(namespace+".delete",bno);
+	}
+
+	@Override
+	public int count() {
+		
+		return sql.selectOne(namespace+".count");
+		
 	}
 
 }

@@ -20,13 +20,19 @@ public class MemberController {
 	@Autowired
 	private MemberService service;
 	
+	@RequestMapping("/test")
+	public String test() {
+		return "member/test";
+	}
 	
 	@RequestMapping("/list")
 	public String getlist(Model model) {
 		
 		List<MemberVO> list=null;
 		list=service.list();
+		int count=service.count();
 		model.addAttribute("lists", list);
+		model.addAttribute("count", count);
 	
 		return "member/list";
 	}
@@ -79,7 +85,7 @@ public class MemberController {
 		return "redirect:/member/list";
 	}
 		
-	
+
 	
 	
 }
