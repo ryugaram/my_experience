@@ -8,6 +8,8 @@
  select 
  bno,name,age,sex,tel,home
  from member_test
+ order by bno desc
+ limit #{start},#{end}; 
 </select>
 
 <select id="write" resultType="com.ryu.vo.MemberVO">

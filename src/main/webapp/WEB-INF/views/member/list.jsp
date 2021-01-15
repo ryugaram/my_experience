@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -8,6 +9,12 @@
  <link href="/resources/css/styles.css" rel="stylesheet" />
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+<script>
+	function selChange() {
+		var sel = document.getElementById('cntPerPage').value;
+		location.href="boardList?nowPage=${paging.nowPage}&cntPerPage="+sel;
+	}
+</script>
 </head>
 <body>
 <div id="nav">
@@ -47,6 +54,25 @@
 
  </tbody>
 <button type="button" onclick="location.href='/member/write'">글쓰기</button> 
+<div style="display: block; text-align: center;">		
+		<c:if test="${paging.startPage != 1 }">
+			<a href="/member/list?nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
+		</c:if>
+		<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="p">
+			<c:choose>
+				<c:when test="${p == paging.nowPage }">
+					<b>${p }</b>
+				</c:when>
+				<c:when test="${p != paging.nowPage }">
+					<a href="/member/list?nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
+				</c:when>
+			</c:choose>
+		</c:forEach>
+		<c:if test="${paging.endPage != paging.lastPage}">
+			<a href="/member/list?nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
+		</c:if>
+	</div>
+	
 </table>
 </div>
 </div>

@@ -3,10 +3,11 @@ package com.ryu.service;
 import java.util.List;
 
 import com.ryu.vo.MemberVO;
+import com.ryu.vo.PagingVO;
 
 public interface MemberService {
 
-	List<MemberVO> list();
+	List<MemberVO> list(PagingVO vo);
 
 	void write(MemberVO vo);
 

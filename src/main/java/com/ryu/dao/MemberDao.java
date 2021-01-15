@@ -3,11 +3,12 @@ package com.ryu.dao;
 import java.util.List;
 
 import com.ryu.vo.MemberVO;
+import com.ryu.vo.PagingVO;
 
 public interface MemberDao {
 
 
-	List<MemberVO> list();
+	List<MemberVO> list(PagingVO vo);
 
 	void write(MemberVO vo);
 
@@ -18,5 +19,6 @@ public interface MemberDao {
 	void delete(int bno);
 
 	public int count();
+
 
 }

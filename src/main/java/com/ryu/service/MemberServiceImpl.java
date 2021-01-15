@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.ryu.dao.MemberDao;
 import com.ryu.vo.MemberVO;
+import com.ryu.vo.PagingVO;
 
 @Service
 public class MemberServiceImpl implements MemberService {
@@ -14,12 +15,8 @@ public class MemberServiceImpl implements MemberService {
 	@Autowired
 	MemberDao dao;
 
-	@Override
-	public List<MemberVO> list() {
-		
-		return dao.list();
-	}
 
+	
 	@Override
 	public void write(MemberVO vo) {
 		
@@ -48,6 +45,13 @@ public class MemberServiceImpl implements MemberService {
 		
 		return dao.count();
 	}
+
+	@Override
+	public List<MemberVO> list(PagingVO vo) {
+		
+		return dao.list(vo);
+	}
+
 
 	
 
