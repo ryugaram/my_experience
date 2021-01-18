@@ -22,7 +22,6 @@ public class PagingVO {
 		
 	}
 //수식 계산 이상함
-	
 	// 시작, 끝 페이지 계산
 	public void calcStartEndPage(int nowPage, int cntPage) {
 	
@@ -39,9 +38,10 @@ public class PagingVO {
 	// DB 쿼리에서 사용할 start, end값 계산
 	public void calcStartEnd(int nowPage, int cntPerPage) {
 	
-		setEnd(nowPage * cntPerPage);
-		setStart(getEnd() - cntPerPage + 1);
+		setEnd(cntPerPage);
+		setStart((nowPage* cntPerPage) + 1);
 		
+	
 	}
 
 	// 제일 마지막 페이지 계산
@@ -116,7 +116,9 @@ public class PagingVO {
 
 
 	public int getStart() {
-		return start;
+		
+		return (this.nowPage-1)*cntPerPage;
+
 	}
 
 
