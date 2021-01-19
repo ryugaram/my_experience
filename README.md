@@ -62,7 +62,7 @@ spring + mysql + mybatis 가지고 놀기
 
  <img src = "https://user-images.githubusercontent.com/38341106/105002720-0d8dc380-5a75-11eb-8750-f4ac0337eae6.png" width="40%" height="800">
    
-  - controller ,service ,dad , vo 로 mvc패턴   
+  - controller ,service ,da , vo 로 mvc패턴   
   
   
 
