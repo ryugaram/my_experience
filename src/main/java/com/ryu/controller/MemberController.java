@@ -20,9 +20,11 @@ public class MemberController {
 	@Autowired
 	private MemberService service;
 	
-	@RequestMapping("/test")
+	
+	
+	@RequestMapping("/daum")
 	public String test() {
-		return "member/test";
+		return "member/daum";
 	}
 	
 	@RequestMapping("/list")

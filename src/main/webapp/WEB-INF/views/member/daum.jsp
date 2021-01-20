@@ -1,16 +1,16 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=-UTF-8" pageEncoding="UTF-8"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-
- <!-- 다음 api -->
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
     //본 예제에서는 도로명 주소 표기 방식에 대한 법령에 따라, 내려오는 데이터를 조합하여 올바른 주소를 구성하는 방법을 설명합니다.
     function sample4_execDaumPostcode() {
         new daum.Postcode({
-        	 oncomplete: function(data) {
+            oncomplete: function(data) {
                 // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
 
                 // 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
@@ -33,9 +33,9 @@
                 }
 
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                  document.getElementById('sample4_postcode').value = data.zonecode;  
+                /*  document.getElementById('sample4_postcode').value = data.zonecode;  */
                 document.getElementById("sample4_roadAddress").value = roadAddr;
-                 document.getElementById("sample4_jibunAddress").value = data.jibunAddress; 
+                document.getElementById("sample4_jibunAddress").value = data.jibunAddress;
                 
                 // 참고항목 문자열이 있을 경우 해당 필드에 넣는다.
                 if(roadAddr !== ''){
@@ -63,84 +63,17 @@
         }).open();
     }
 </script>
-
-<meta charset="UTF-8">
-<title>게시물 작성</title>
- <link href="/resources/css/styles.css" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="layoutAuthentication_content">
-                <main>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-7">
-                                <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
-                                    <div class="card-body">
-<form method="post">
 
- <div class="form-row">
-      <div class="col-md-6">
-         <div class="form-group">
-<label class="small mb-1">이름</label>
-<input class="form-control py-4" type="text" name="name" /><br />
-</div>
-</div>
-
-
- <div class="col-md-6">
-   <div class="form-group">
-<label class="small mb-1">나이</label>
-<input class="form-control py-4" type="text" name="age" /><br />
-
-   </div>
-    </div>
-  </div>
-
-<div class="form-group">
-<label class="small mb-1">집주소</label> <br>
-<input  type="text" id="sample4_postcode" placeholder="우편번호">
+<input type="text" id="sample4_postcode" placeholder="우편번호">
 <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
-<input class="form-control py-4" type="text"  id="sample4_roadAddress" name="home" placeholder="도로명 주소"/>
-<input class="form-control py-4" type="text" id="sample4_jibunAddress" placeholder="지번주소">
+<input type="text" id="sample4_roadAddress" placeholder="도로명주소">
+<input type="text" id="sample4_jibunAddress" placeholder="지번주소">
 <span id="guide" style="color:#999;display:none"></span>
-<input class= type="text" id="sample4_detailAddress" placeholder="상세주소">
-<input  type="text" id="sample4_extraAddress" placeholder="참고항목">
-</div>
-
- <div class="form-row">
- <div class="col-md-6">
-  <div class="form-group">
-<label class="small mb-1">전화번호</label>
-<input class="form-control py-4" type="text" name="tel" /><br />
-</div>
-
-</div>
-
-<div class="col-md-6">
- <div class="form-group">
-<label class="small mb-1">성별</label>
-<input class="form-control py-4" type="text" name="sex" /><br />
-
-</div>
-</div>
-</div>
+<input type="text" id="sample4_detailAddress" placeholder="상세주소">
+<input type="text" id="sample4_extraAddress" placeholder="참고항목">
 
 
-<button type="submit">작성</button>
-<button type="button" onclick="location.href='/member/list'">메인</button>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="/resources/js/scripts.js"></script>
 </body>
 </html>
