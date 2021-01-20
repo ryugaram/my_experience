@@ -99,7 +99,7 @@
   </div>
 
 <div class="form-group">
-<label class="small mb-1">집주소</label> <br>
+<label class="small mb-1">주소</label> <br>
 <input  type="text" id="sample4_postcode" placeholder="우편번호">
 <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
 <input class="form-control py-4" type="text"  id="sample4_roadAddress" name="home" placeholder="도로명 주소"/>
