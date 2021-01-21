@@ -84,7 +84,7 @@
       <div class="col-md-6">
          <div class="form-group">
 <label class="small mb-1">이름</label>
-<input class="form-control py-4" type="text" name="name" /><br />
+<input class="form-control py-4" type="text" name="name" />
 </div>
 </div>
 
@@ -92,7 +92,7 @@
  <div class="col-md-6">
    <div class="form-group">
 <label class="small mb-1">나이</label>
-<input class="form-control py-4" type="text" name="age" /><br />
+<input class="form-control py-4" type="text" name="age" />
 
    </div>
     </div>
@@ -101,12 +101,26 @@
 <div class="form-group">
 <label class="small mb-1">주소</label> <br>
 <input  type="text" id="sample4_postcode" placeholder="우편번호">
-<input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
+<input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기">
+<br><br>
+<div class="form-row">
+ <div class="col-md-6">
 <input class="form-control py-4" type="text"  id="sample4_roadAddress" name="home" placeholder="도로명 주소"/>
+</div>
+ <div class="col-md-6">
 <input class="form-control py-4" type="text" id="sample4_jibunAddress" placeholder="지번주소">
+</div>
+</div>
 <span id="guide" style="color:#999;display:none"></span>
-<input class= type="text" id="sample4_detailAddress" placeholder="상세주소">
-<input  type="text" id="sample4_extraAddress" placeholder="참고항목">
+<br>
+<div class="form-row">
+ <div class="col-md-6">
+<input class="form-control py-4" type="text" id="sample4_detailAddress" placeholder="상세주소">
+</div>
+
+ <div class="col-md-6">
+<input  class="form-control py-4" type="text" id="sample4_extraAddress" placeholder="참고항목">
+</div>
 </div>
 
  <div class="form-row">
